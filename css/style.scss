@@ -1,0 +1,873 @@
+/* ---------------Google font----------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* ---------------Global style----------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.max-width {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+
+/* ---x-----------Global style-------------x--- */
+
+
+/* ---------------scroll btn style----------------- */
+
+.scroll-up-btn {
+    width: 42px;
+    color: #fff;
+    background: crimson;
+    border-radius: 50%;
+    font-size: 30px;
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    text-align: center;
+    line-height: 12px;
+    padding: 7px;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* ---x-----------scroll btn style-------------x--- */
+
+
+/* ---------------Navigatin----------------- */
+
+.navbar {
+    position: fixed;
+    // background:crimson;
+    padding: 30px 0;
+    width: 100%;
+    font-family: 'Ubunto', sans-serif;
+    transition: all 0.5s ease;
+    .max-width {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    // logo style
+    .logo {
+        a {
+            color: #fff;
+            font-size: 35px;
+            font-weight: 600;
+            span {
+                color: crimson;
+            }
+        }
+    }
+    // menu style
+    .menu {
+        li {
+            display: inline-block;
+            list-style: none;
+            a {
+                color: #fff;
+                margin-left: 25px;
+                font-weight: 500;
+                font-size: 18px;
+                transition: color 0.3s ease;
+                &:hover {
+                    color: crimson;
+                }
+            }
+        }
+    }
+    .menu-bar {
+        color: white;
+        font-size: 23px;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+// sticky style
+.navbar.sticky {
+    background: crimson;
+    padding: 10px 0;
+    z-index: 999;
+    .logo {
+        a {
+            span {
+                color: white;
+            }
+        }
+    }
+    .menu li a:hover {
+        color: #fff;
+    }
+}
+
+
+/* ---x-----------Navigatin-------------x--- */
+
+
+/* ---------------Home section style----------------- */
+
+.home {
+    background: url("images/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    // color:green;
+    display: flex;
+    min-height: 500px;
+    font-family: 'Ubunto', sans-serif;
+    color: #fff;
+    .max-width {
+        margin: auto 0 auto 40px;
+    }
+    .home-content {
+        .text-1 {
+            font-size: 27px;
+        }
+        .text-2 {
+            font-size: 60px;
+            font-weight: 600;
+            margin-left: -3px;
+        }
+        .text-3 {
+            font-size: 40px;
+            margin: 5px 0;
+            span {
+                color: crimson;
+                font-weight: 500px;
+            }
+        }
+        a {
+            background: crimson;
+            display: inline-block;
+            color: #fff;
+            border: 2px solid crimson;
+            border-radius: 6px;
+            margin-top: 10px;
+            padding: 10px 30px;
+            transition: all 0.3s ease;
+            font-size: 30px;
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+}
+
+
+/* ---x-----------Home section Style-------------x--- */
+
+
+/* ---------------About Section Style----------------- */
+
+.about,
+.service,
+.skills,
+.teams,
+.contact {
+    font-family: 'Poppins', sans-serif;
+    .title {
+        position: relative;
+        font-family: 'Ubunto', sans-serif;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-bottom: 60px;
+        font-size: 40px;
+        font-weight: 500px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 3px;
+            background: #111;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &::after {
+            content: "Who i am";
+            position: absolute;
+            font-size: 20px;
+            bottom: -13px;
+            padding: 5px;
+            left: 50%;
+            color: crimson;
+            transform: translateX(-50%);
+            background: #fff;
+        }
+    }
+    .about-content,
+    .serv-content,
+    .skills-content,
+    .contact-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+            width: 45%;
+            img {
+                height: 400px;
+                width: 400px;
+                object-fit: cover;
+            }
+        }
+        .right {
+            width: 55%;
+            .text {
+                font-size: 25px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                span {
+                    color: crimson;
+                }
+            }
+            p {
+                text-align: justify;
+            }
+            a {
+                background: crimson;
+                display: inline-block;
+                color: #fff;
+                border: 2px solid crimson;
+                border-radius: 6px;
+                margin-top: 10px;
+                padding: 10px 30px;
+                transition: all 0.3s ease;
+                font-size: 20px;
+                &:hover {
+                    color: crimson;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+
+/* ---x-----------About Section Style-------------x--- */
+
+
+/* ---------------Service Section Style----------------- */
+
+.service,
+.teams {
+    background: #111;
+    color: #fff;
+    .title {
+        &::before {
+            background: #fff;
+        }
+        &::after {
+            content: "what I provide";
+            background: #111;
+        }
+    }
+    .serv-content {
+        .card {
+            width: calc(33% - 20px);
+            background: #333;
+            text-align: center;
+            padding: 20px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            &:hover {
+                background: crimson;
+            }
+            &:hover .box {
+                transform: scale(1.05);
+            }
+            .box {
+                transition: all 0.3s ease;
+                i {
+                    font-size: 50px;
+                    color: crimson;
+                    transition: color 0.3s ease;
+                }
+                .text {
+                    font-size: 25px;
+                    font-weight: 500;
+                    margin: 10px 0 7px 0;
+                }
+            }
+            &:hover i {
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+/* ---x-----------Service Section Style-------------x--- */
+
+
+/* ---------------Skills Section Style----------------- */
+
+.skills {
+    .title {
+        &::after {
+            content: "what i know";
+        }
+    }
+    .skills-content {
+        .column {
+            width: calc(50% - 30px);
+            margin-bottom: 30px;
+        }
+        .left {
+            .text {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            p {
+                text-align: justify;
+            }
+            a {
+                background: crimson;
+                display: inline-block;
+                color: #fff;
+                border: 2px solid crimson;
+                border-radius: 6px;
+                margin-top: 10px;
+                padding: 8px 16px;
+                transition: all 0.3s ease;
+                font-size: 18px;
+                &:hover {
+                    color: crimson;
+                    background: transparent;
+                }
+            }
+        }
+        .right {
+            .bars {
+                margin-bottom: 15px;
+                .info {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+                    span {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                }
+                .line {
+                    background: lightgray;
+                    height: 5px;
+                    width: 100%;
+                    border-radius: 6px;
+                    position: relative;
+                    &::before {
+                        content: " ";
+                        position: absolute;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: crimson;
+                    }
+                }
+                .html::before {
+                    width: 90%;
+                }
+                .css::before {
+                    width: 60%;
+                }
+                .js::before {
+                    width: 80%;
+                }
+                .php::before {
+                    width: 50%;
+                }
+                .mysql::before {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+
+/* ---x-----------Skills Section Style-------------x--- */
+
+
+/* ---------------Teams Section Style----------------- */
+
+.teams {
+    .title {
+        &::after {
+            content: "Who with me";
+        }
+    }
+    .carousel {
+        .card {
+            background: #222;
+            border-radius: 6px;
+            padding: 25px 35px;
+            text-align: center;
+            transition: all 0.3s ease;
+            &:hover {
+                background: crimson;
+            }
+            .box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                img {
+                    height: 150px;
+                    width: 150px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: 5px solid crimson;
+                }
+                &:hover img {
+                    border-color: #fff;
+                }
+                .text {
+                    font-size: 25px;
+                    margin: 10px 0 7px 0;
+                    font-weight: 500;
+                }
+            }
+            &:hover .box {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.owl-dots {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    border: 2px solid crimson !important;
+    outline: none!important;
+    margin: 0 5px;
+}
+
+.owl-dot.active {
+    background: crimson!important;
+    border-color: #fff!important;
+    width: 30px;
+}
+
+.owl-dot:hover {
+    background: crimson!important;
+    border-color: white!important;
+}
+
+
+/* ---x-----------Teams Section Style-------------x--- */
+
+
+/* ---------------Contact section Style----------------- */
+
+.contact {
+    .title {
+        &::after {
+            content: "get in touch";
+        }
+    }
+    .contact-content {
+        .column {
+            width: calc(50% - 30px);
+            margin-bottom: 15px;
+        }
+        .left {
+            .text {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            p {
+                text-align: justify;
+            }
+            .icons {
+                margin: 10px 0;
+                .row {
+                    display: flex;
+                    height: 65px;
+                    align-items: center;
+                    i {
+                        font-size: 25px;
+                        color: crimson;
+                    }
+                    .info {
+                        margin-left: 30px;
+                        .head {
+                            font-weight: 600;
+                        }
+                        .sub-title {
+                            color: #333;
+                        }
+                    }
+                }
+            }
+        }
+        .right {
+            form {
+                .fields {
+                    display: flex;
+                    .field {
+                        height: 45px;
+                        width: 100%;
+                        margin-bottom: 15px;
+                    }
+                }
+                .field {
+                    height: 45px;
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+                .name {
+                    margin-right: 10px;
+                }
+                .email {
+                    margin-left: 10px;
+                }
+                .textarea {
+                    height: 80px;
+                    textarea {
+                        height: 100%;
+                        width: 100%;
+                        padding: 0 15px;
+                        outline: none;
+                        border: 1px solid lightgrey;
+                        border-radius: 6px;
+                        font-size: 17px;
+                        resize: none;
+                    }
+                }
+                input {
+                    height: 100%;
+                    width: 100%;
+                    padding: 0 15px;
+                    outline: none;
+                    border: 1px solid lightgrey;
+                    border-radius: 6px;
+                    font-size: 17px;
+                }
+                .button {
+                    height: 45px;
+                    width: 100%;
+                    input {
+                        height: 100%;
+                        width: 100%;
+                        background: crimson;
+                        font-size: 20px;
+                        border: 2px solid crimson;
+                        font-weight: 500;
+                        color: #fff;
+                        border-radius: 6px;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            color: crimson;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ---x-----------Contact section Style-------------x--- */
+
+
+/* ---------------Footer Style----------------- */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background: #111;
+    span {
+        a {
+            color: crimson;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+/* ---x-----------Footer Style-------------x--- */
+
+
+/* ---------------Responsive design----------------- */
+
+@media only screen and(max-width:1080px) {
+    .about {
+        .max-width {
+            padding: 0 40px;
+        }
+    }
+}
+
+@media only screen and(max-width:1020px) {
+    .about {
+        .about-content {
+            .left {
+                img {
+                    width: 350px;
+                    height: 380px;
+                }
+            }
+            .column {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:900px) {
+    .max-width {
+        padding: 0 40px;
+    }
+    .about-content {
+        .column {
+            width: 100%;
+        }
+        .left {
+            display: flex;
+            margin: 0 auto 60px auto;
+            justify-content: center;
+            img {
+                height: 350px;
+            }
+        }
+        .right {
+            flex: 100%;
+        }
+    }
+    .skills {
+        .skills-content {
+            .column {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:790px) {
+    .navbar {
+        .menu {
+            position: fixed;
+            background: #222;
+            height: 100vh;
+            left: -100%;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            padding-top: 80px;
+            transition: all 0.5s ease;
+            li {
+                display: block;
+                a {
+                    display: inline-block;
+                    margin: 20px 0;
+                    font-size: 25px;
+                }
+            }
+        }
+        .menu.active {
+            left: 0;
+        }
+        // menu bar & cross btn with before psudo selector
+        .menu-bar {
+            display: block;
+            z-index: 999;
+            i.active:before {
+                content: "\f00d";
+            }
+        }
+    }
+    .home {
+        .max-width {
+            margin-left: 0;
+        }
+        .home-content {
+            a {
+                font-size: 22px;
+            }
+        }
+    }
+    .service {
+        .serv-content {
+            .card {
+                width: calc(50% - 10px);
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:650px) {
+    .home {
+        .home-content {
+            .text-1 {
+                font-size: 20px;
+            }
+            .text-2 {
+                font-size: 40px;
+                margin-left: -3px;
+            }
+            .text-3 {
+                font-size: 25px;
+                margin: 5px 0;
+            }
+            a {
+                font-size: 20px;
+                padding: 10px 25px;
+            }
+        }
+    }
+    .contact {
+        .contact-content {
+            .column {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:540px) {
+    .service {
+        .title::after {
+            font-size: 16px;
+        }
+        .serv-content {
+            .card {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:450px) {
+    .home {
+        .home-content {
+            .text-1 {
+                font-size: 20px;
+            }
+            .text-2 {
+                font-size: 30px;
+                margin-left: -3px;
+            }
+            .text-3 {
+                font-size: 22px;
+                margin: 5px 0;
+            }
+            a {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:350px) {
+    .max-width {
+        padding: 0 20px;
+    }
+    .home {
+        .home-content {
+            .text-1 {
+                font-size: 20px;
+            }
+            .text-2 {
+                font-size: 25px;
+                margin-left: -3px;
+            }
+            .text-3 {
+                font-size: 20px;
+                margin: 5px 0;
+            }
+            a {
+                font-size: 16px;
+                padding: 5px 15px;
+            }
+        }
+    }
+    .about-content {
+        .left {
+            img {
+                display: block;
+                width: auto;
+                height: auto;
+            }
+        }
+        .right {
+            a {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:300px) {
+    .home {
+        .home-content {
+            .text-1 {
+                font-size: 18px;
+            }
+            .text-2 {
+                font-size: 23px;
+                margin-left: -3px;
+            }
+            .text-3 {
+                font-size: 20px;
+                margin: 5px 0;
+            }
+        }
+    }
+    .about {
+        .about-content {
+            .right {
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+/* ---x-----------Responsive design-------------x--- */
